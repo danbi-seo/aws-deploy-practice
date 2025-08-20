@@ -2,4 +2,13 @@ name: Github
 
 on:
   push:
-    branches: -main
+    branches:
+      - main
+
+jobs:
+  My-Deploy-Job:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Pokemon Api 출력하기
+        run: echo "Pokemon Api"
