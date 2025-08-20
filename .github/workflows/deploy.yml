@@ -23,3 +23,8 @@ jobs:
         run: |
           echo $GITHUB_REPOSITORY
           echo $GITHUB_SHA
+
+      - name: Github Actions Secret 변수 사용해보기
+        run: |
+          echo ${{ secret.MY_NAME }}
+          echo ${{ secret.MY_HOBBY }}
