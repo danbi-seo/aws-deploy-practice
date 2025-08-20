@@ -12,3 +12,9 @@ jobs:
     steps:
       - name: Pokemon Api 출력하기
         run: echo "Pokemon Api"
+
+      - name: 여러 명령어 문장 작성하기
+        run: |
+          echo "Good"
+          echo "Morning"
+          pwd
