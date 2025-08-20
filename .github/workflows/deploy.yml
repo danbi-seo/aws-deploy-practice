@@ -1,4 +1,4 @@
-name: Github
+name: Deploy To S3 And Invalidate Cloudfront
 
 on:
   push:
@@ -6,25 +6,38 @@ on:
       - main
 
 jobs:
-  My-Deploy-Job:
+  deploy:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Pokemon Api 출력하기
-        run: echo "Pokemon Api"
+      - name: Github Repository 파일 불러오기
+        uses: actions/checkout@v4
+# name: Github
 
-      - name: 여러 명령어 문장 작성하기
-        run: |
-          echo "Good"
-          echo "Morning"
-          pwd
+# on:
+#   push:
+#     branches:
+#       - main
 
-      - name: Github Actions 자체 저장되어 있는 변수 사용하기
-        run: |
-          echo $GITHUB_REPOSITORY
-          echo $GITHUB_SHA
+# jobs:
+#   My-Deploy-Job:
+#     runs-on: ubuntu-latest
 
-      - name: Github Actions Secret 변수 사용해보기2
-        run: |
-          echo ${{ secrets.MY_NAME }}
-          echo ${{ secrets.MY_HOBBY }}
+#     steps:
+#       - name: Pokemon Api 출력하기
+#         run: echo "Pokemon Api"
+
+#       - name: 여러 명령어 문장 작성하기
+#         run: |
+#           echo "Good"
+#           echo "Morning"
+#           pwd
+
+#       - name: Github Actions 자체 저장되어 있는 변수 사용하기
+#         run: |
+#           echo $GITHUB_REPOSITORY
+#           echo $GITHUB_SHA
+
+#       - name: Github Actions Secret 변수 사용해보기2
+#         run: |
+#           echo ${{ secrets.MY_NAME }}
+#           echo ${{ secrets.MY_HOBBY }}
